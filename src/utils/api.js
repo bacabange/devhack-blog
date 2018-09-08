@@ -1,14 +1,25 @@
 import axios from 'axios';
-import * as constants from '../config/constants';
+import * as consts from '../config/constants';
 
 export function getPosts() {
-  return axios.get(`${constants.PATH_BASE}${constants.PATH_POSTS}`);
+  return axios({
+    method: 'get',
+    url: `${consts.PATH_BASE}${consts.PATH_POSTS}`,
+    headers: {
+      'Content-Type': 'application/x-www-form-urlencoded',
+      Accept: 'application/json',
+    },
+  });
 }
 
-export function savePost({ title, body }) {
+export function postPost({ title, body }) {
   return axios({
     method: 'post',
-    url: `${constants.PATH_BASE}${constants.PATH_POSTS}`,
+    url: `${consts.PATH_BASE}${consts.PATH_POSTS}`,
+    headers: {
+      'Content-Type': 'application/x-www-form-urlencoded',
+      Accept: 'application/json',
+    },
     data: {
       title,
       body,

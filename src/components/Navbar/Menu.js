@@ -1,12 +1,17 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import MenuItem from './MenuItem';
 
 const Menu = props => {
   return (
     <ul className="navbar-nav ml-auto">
-      <MenuItem title="Menu Item" />
-      <MenuItem title="Menu Item 2" />
-      <MenuItem title="Menu Item 3" />
+      <MenuItem>
+        <Link to="/">Inicio</Link>
+      </MenuItem>
+
+      <MenuItem>
+        <Link to="/create">Crear Post</Link>
+      </MenuItem>
     </ul>
   );
 };
