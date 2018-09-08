@@ -61,26 +61,41 @@ export default class Home extends Component {
       .catch(error => console.log(error));
   };
 
+  isValid = data => {
+    console.log('Se ejecutó en el padre', data);
+  };
+
   render() {
     const { loading } = this.state;
     return (
       <React.Fragment>
-        <Navbar />
+        <Navbar siteName="Hola" link="hola" lista="castillo" />
 
-        <Header />
+        <Header isValid={this.isValid} />
 
         <Container>
           <form onSubmit={this.handleSubmit}>
-            <input type="text" name="postTitle" onChange={this.handleChange} value={this.state.postTitle} />
+            <input
+              className="form-control"
+              type="text"
+              name="postTitle"
+              onChange={this.handleChange}
+              value={this.state.postTitle}
+              placeholder="Title"
+            />
             <textarea
               name="postBody"
               id=""
               cols="30"
               rows="5"
               onChange={this.handleChange}
+              className="form-control mt-4"
               value={this.state.postBody}
+              placeholder="Body"
             />
-            <button type="submit">Crear</button>
+            <button className="btn btn-primary mt-4 mb-4" type="submit">
+              Crear
+            </button>
           </form>
           {loading ? <div className="alert alert-info">Loading...</div> : this.renderPosts()}
         </Container>

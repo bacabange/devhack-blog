@@ -8,7 +8,7 @@ class Navbar extends Component {
       <nav className="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
         <div className="container">
           <a className="navbar-brand" href="index.html">
-            Blog
+            {this.props.apellido}
           </a>
           <button
             className="navbar-toggler navbar-toggler-right"
