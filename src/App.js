@@ -27,6 +27,8 @@ class App extends Component {
               {/* <Redirect from="/home" to="/create" /> */}
               <Route path="/" exact component={Home} />
               <Route path="/create" exact component={CreatePost} />
+              <Route path="/post/:id" exact component={Post} />
+              {/* Crear pagina/ruta para el error 404 */}
               <Redirect to="/" />
             </Switch>
           </Container>
