@@ -1,0 +1,17 @@
+.container-404 {
+    background: red;
+    padding: 16px;
+    color: white;
+}
+
+.container-404-title {
+    font-size: 200px;
+    text-align: center;
+    margin: 0;
+}
+
+.container-404-message {
+    font-size: 22px;
+    text-align: center;
+    margin: 0;
+}

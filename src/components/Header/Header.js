@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
+import Image from './header.jpeg';
 
 export default class Header extends Component {
   render() {
     return (
-      <header className="masthead" style={{ backgroundImage: 'url(images/header.jpeg)' }}>
+      <header className="masthead" style={{ backgroundImage: `url(${Image})` }}>
         <div className="overlay" />
         <div className="container">
           <div className="row">

@@ -12,6 +12,17 @@ export function getPosts() {
   });
 }
 
+export function getPost(id) {
+  return axios({
+    method: 'get',
+    url: `${consts.PATH_BASE}${consts.PATH_POSTS}/${id}`,
+    headers: {
+      'Content-Type': 'application/x-www-form-urlencoded',
+      Accept: 'application/json',
+    },
+  });
+}
+
 export function postPost({ title, body }) {
   return axios({
     method: 'post',

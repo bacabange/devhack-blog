@@ -12,6 +12,7 @@ import { Footer } from './components/Footer/';
 import Home from './pages/Home';
 import CreatePost from './pages/CreatePost';
 import Post from './pages/Post';
+import NotFound from './pages/NotFound';
 
 class App extends Component {
   render() {
@@ -29,7 +30,7 @@ class App extends Component {
               <Route path="/create" exact component={CreatePost} />
               <Route path="/post/:id" exact component={Post} />
               {/* Crear pagina/ruta para el error 404 */}
-              <Redirect to="/" />
+              <Route component={NotFound} />
             </Switch>
           </Container>
           <Footer />
