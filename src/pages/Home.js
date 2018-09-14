@@ -1,36 +1,36 @@
 import React, { Component } from 'react';
 import { PostPreview } from '../components/PostPreview/';
 import { getPosts } from '../utils/api';
+import * as postsActions from '../actions/postsActions';
 
-export default class Home extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      posts: [],
-      loading: true,
-    };
-  }
+import { connect } from 'react-redux';
 
+class Home extends Component {
   componentDidMount() {
-    getPosts()
-      .then(res => {
-        this.setState({
-          posts: res.data,
-          loading: false,
-        });
-      })
-      .catch(err => console.log(err));
+    this.props.getFetch('/posts', 'get');
   }
 
   renderPosts = () => {
-    const { posts } = this.state;
+    const { posts } = this.props;
 
     return posts.map(post => <PostPreview key={post.id} id={post.id} title={post.title} body={post.body} />);
   };
 
   render() {
-    const { loading } = this.state;
+    const { loading } = this.props;
 
     return <React.Fragment>{loading ? 'loading...' : this.renderPosts()}</React.Fragment>;
   }
 }
+
+function mapStateToProps(state) {
+  return {
+    posts: state.postsReducer.posts,
+    loading: state.postsReducer.loading,
+  };
+}
+
+export default connect(
+  mapStateToProps,
+  postsActions
+)(Home);

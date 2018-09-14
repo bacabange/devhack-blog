@@ -37,3 +37,15 @@ export function postPost({ title, body }) {
     },
   });
 }
+
+export const apiRequest = (urlApi, method, body = {}) => {
+  return axios({
+    method,
+    url: `${consts.PATH_BASE}${urlApi}`,
+    headers: {
+      'Content-Type': 'application/x-www-form-urlencoded',
+      Accept: 'application/json',
+    },
+    data: body,
+  });
+};
