@@ -1,0 +1,3 @@
+export const REQUEST_POSTS = 'REQUEST_POSTS';
+export const RECIEVE_POSTS = 'RECIEVE_POSTS';
+export const ERROR_FETCH_POSTS = 'ERROR_FETCH_POSTS';

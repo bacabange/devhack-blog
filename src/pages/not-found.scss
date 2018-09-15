@@ -1,0 +1,32 @@
+@import 'styles/_colors.scss';
+
+.container-404 {
+    background: $color_rojo;
+    color: white;
+    text-align: center;
+    padding: 2em;
+    border-top-right-radius: $border-radius;
+    border-bottom-left-radius: $border-radius;
+
+    &-title {
+        font-size: 100px;
+        margin: 0;
+    }
+
+    &-message {
+        font-family: 'Courier New', Courier, monospace;
+        margin: 0;
+
+        &>a {
+            color: $color_amarillo;
+
+            &::after {
+                content: ' --Después';
+            }
+
+            &::before {
+                content: 'Antes-- ';
+            }
+        }
+    }
+}

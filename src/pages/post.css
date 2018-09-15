@@ -1,0 +1,9 @@
+.post-detail {
+    border: solid 1px #dfdfdf;
+    border-radius: 8px;
+    padding: 16px;
+}
+
+.post-detail h1 {
+    color: #0085A1;
+}
