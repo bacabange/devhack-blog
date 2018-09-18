@@ -12,6 +12,10 @@ const Menu = props => {
       <MenuItem>
         <Link to="/create">Crear Post</Link>
       </MenuItem>
+
+      <MenuItem>
+        <Link to="/ant">Ant</Link>
+      </MenuItem>
     </ul>
   );
 };

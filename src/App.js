@@ -7,12 +7,14 @@ import { Navbar } from './components/Navbar/';
 import { Header } from './components/Header/';
 import { Container } from './components/Container/';
 import { Footer } from './components/Footer/';
+import 'antd/dist/antd.css';
 
 // Pages
 import Home from './pages/Home';
 import CreatePost from './pages/CreatePost';
 import Post from './pages/Post';
 import NotFound from './pages/NotFound';
+import AntPage from './pages/AntPage';
 
 class App extends Component {
   render() {
@@ -29,6 +31,7 @@ class App extends Component {
               <Route path="/" exact component={Home} />
               <Route path="/create" exact component={CreatePost} />
               <Route path="/post/:id" exact component={Post} />
+              <Route path="/ant" exact component={AntPage} />
               {/* Crear pagina/ruta para el error 404 */}
               <Route component={NotFound} />
             </Switch>
