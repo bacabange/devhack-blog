@@ -1,5 +1,6 @@
 import React from 'react';
 import { Steps, Button, message } from 'antd';
+import { Button as BootstrapButton } from 'reactstrap';
 
 const steps = [
   {
@@ -61,6 +62,8 @@ export default class AntPage extends React.Component {
             </Button>
           )}
         </div>
+
+        <BootstrapButton color="danger">Botón en reactstrap</BootstrapButton>
       </div>
     );
   }
