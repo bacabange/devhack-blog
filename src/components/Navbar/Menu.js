@@ -16,6 +16,10 @@ const Menu = props => {
       <MenuItem>
         <Link to="/ant">Ant</Link>
       </MenuItem>
+
+      <MenuItem>
+        <Link to="/chart">Chart</Link>
+      </MenuItem>
     </ul>
   );
 };

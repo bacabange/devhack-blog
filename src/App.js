@@ -15,6 +15,7 @@ import CreatePost from './pages/CreatePost';
 import Post from './pages/Post';
 import NotFound from './pages/NotFound';
 import AntPage from './pages/AntPage';
+import Chart from './pages/Chart';
 
 class App extends Component {
   render() {
@@ -32,6 +33,7 @@ class App extends Component {
               <Route path="/create" exact component={CreatePost} />
               <Route path="/post/:id" exact component={Post} />
               <Route path="/ant" exact component={AntPage} />
+              <Route path="/chart" exact component={Chart} />
               {/* Crear pagina/ruta para el error 404 */}
               <Route component={NotFound} />
             </Switch>
